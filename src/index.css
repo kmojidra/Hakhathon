@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BharatSkill Connect Design System - Light Vine Green Theme */
+
+@layer base {
+  :root {
+    /* Background and surfaces */
+    --background: 0 0% 100%;
+    --background-secondary: 120 15% 98%;
+    --foreground: 120 10% 15%;
+
+    /* Brand colors - Light Vine Green theme */
+    --primary: 110 45% 55%;
+    --primary-dark: 100 50% 45%;
+    --primary-light: 120 35% 75%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary brand colors */
+    --secondary: 115 30% 85%;
+    --secondary-dark: 105 35% 70%;
+    --secondary-foreground: 120 10% 15%;
+
+    /* Accent colors */
+    --accent: 80 60% 65%;
+    --accent-dark: 75 55% 55%;
+    --accent-foreground: 120 10% 15%;
+
+    /* Neutral colors */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Trust and success colors */
+    --success: 142 76% 36%;
+    --success-foreground: 355.7 100% 97.3%;
+
+    --warning: 32 95% 44%;
+    --warning-foreground: 355.7 100% 97.3%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* UI elements */
+    --card: 0 0% 100%;
+    --card-foreground: 120 10% 15%;
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 110 45% 55%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(110, 45%, 55%), hsl(100, 50%, 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(120, 35%, 85%), hsl(115, 30%, 85%));
+    --gradient-hero: linear-gradient(135deg, hsl(110, 45%, 55%), hsl(100, 50%, 45%), hsl(80, 60%, 65%));
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(120, 15%, 98%));
+
+    /* Shadows with brand color hints */
+    --shadow-brand: 0 10px 25px -5px hsl(110, 45%, 55%, 0.15);
+    --shadow-brand-lg: 0 25px 50px -12px hsl(110, 45%, 55%, 0.25);
+    --shadow-card: 0 4px 6px -1px hsl(120, 15%, 88%, 0.1), 0 2px 4px -1px hsl(120, 15%, 88%, 0.06);
+
+    /* Animation and transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 12px;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with warm green vine tones */
+    --background: 120 20% 8%;
+    --background-secondary: 115 25% 12%;
+    --foreground: 0 0% 95%;
+
+    /* Brand colors maintain vibrancy in dark mode */
+    --primary: 110 50% 65%;
+    --primary-dark: 100 55% 55%;
+    --primary-light: 120 40% 75%;
+    --primary-foreground: 120 20% 8%;
+
+    --secondary: 115 25% 25%;
+    --secondary-dark: 105 30% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --accent: 80 65% 65%;
+    --accent-dark: 75 60% 55%;
+    --accent-foreground: 120 20% 8%;
+
+    --muted: 120 15% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --success: 142 76% 45%;
+    --success-foreground: 120 20% 8%;
+
+    --warning: 32 90% 55%;
+    --warning-foreground: 120 20% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 95%;
+
+    --card: 120 20% 10%;
+    --card-foreground: 0 0% 95%;
+    --border: 120 15% 18%;
+    --input: 120 15% 18%;
+    --ring: 110 50% 65%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(110, 50%, 65%), hsl(100, 55%, 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(115, 25%, 25%), hsl(105, 30%, 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(110, 50%, 65%), hsl(100, 55%, 55%), hsl(80, 65%, 65%));
+    --gradient-card: linear-gradient(145deg, hsl(120, 20%, 10%), hsl(115, 25%, 12%));
+
+    --shadow-brand: 0 10px 25px -5px hsl(110, 50%, 65%, 0.3);
+    --shadow-brand-lg: 0 25px 50px -12px hsl(110, 50%, 65%, 0.4);
+    --shadow-card: 0 4px 6px -1px hsl(120, 15%, 18%, 0.3), 0 2px 4px -1px hsl(120, 15%, 18%, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Brand gradient utilities */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  /* Brand shadow utilities */
+  .shadow-brand {
+    box-shadow: var(--shadow-brand);
+  }
+  
+  .shadow-brand-lg {
+    box-shadow: var(--shadow-brand-lg);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Text gradients */
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Hover animations */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-brand);
+  }
+}
