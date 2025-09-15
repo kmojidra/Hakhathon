@@ -10,8 +10,8 @@ const Header = () => {
   const navItems = [
     { label: 'Find a Skill', href: '/find-skill' },
     { label: 'Become a Guru', href: '/role-selection' },
-    { label: 'How it Works', href: '#how-it-works' },
-    { label: 'Community', href: '#community' },
+    { label: 'How it Works', href: '/how-it-works' },
+    { label: 'Community', href: '/community' },
   ];
 
   return (

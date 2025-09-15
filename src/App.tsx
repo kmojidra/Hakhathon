@@ -17,6 +17,8 @@ import { db } from "./firebaseConfig";
 import { getFirestore } from "firebase/firestore";
 import NotFound from "./pages/NotFound";
 import FindSkill from './pages/FindSkill';
+import HowItWorks from "./pages/HowItWorks";
+import Community from "./pages/Community";
 import GuruProfile from './pages/GuruProfile';
 
 
@@ -40,6 +42,8 @@ const App = () => (
           <Route path="/join-shishya" element={<JoinShishya />} />
           <Route path="/join-now" element={<JoinNow />} />
           <Route path="/find-skill" element={<FindSkill />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/community" element={<Community />} />
           <Route path="/guru/:name" element={<GuruProfile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
